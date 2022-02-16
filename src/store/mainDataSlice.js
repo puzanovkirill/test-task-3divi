@@ -5,7 +5,6 @@ const mainDataSlice = createSlice({
   initialState: {},
   reducers: {
     setMainData(state, action) {
-      console.log(state, action);
       Object.assign(state, action.payload);
     },
   },
