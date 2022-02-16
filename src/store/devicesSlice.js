@@ -1,12 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const devicesSlice = createSlice({
-  name: 'mainData',
+  name: 'devices',
   initialState: [],
   reducers: {
     setDevices(state, action) {
-      state = [...action.payload];
-      console.log(state);
+      Object.assign(state, action.payload);
     },
   },
 });
