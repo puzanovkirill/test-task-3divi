@@ -79,7 +79,6 @@ const dataToDiagramSlice = createSlice({
           });
         });
       });
-      console.log(state);
     },
   },
 });
