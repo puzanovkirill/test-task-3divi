@@ -1,6 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import mainDataSlice from './mainDataSlice';
+import devicesSlice from './devicesSlice';
 
-const rootReducer = combineReducers({ mainData: mainDataSlice });
+const rootReducer = combineReducers({
+  devices: devicesSlice,
+});
 
 export const store = configureStore({ reducer: rootReducer });
