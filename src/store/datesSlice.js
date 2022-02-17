@@ -5,11 +5,10 @@ const datesSlice = createSlice({
   initialState: [],
   reducers: {
     setDates(state, action) {
-      const tmp = [];
+      state.length = 0;
       action.payload.map((item) => {
-        item.o.forEach((date) => tmp.push(date));
+        item.o.forEach((date) => state.push(date));
       });
-      Object.assign(state, tmp);
     },
   },
 });

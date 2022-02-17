@@ -10,20 +10,12 @@ const FilterItem = ({ device }) => {
   const [isActive, setIsActive] = useState(true);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (isActive) {
-      dispatch(addFilteredItem(device));
-    }
-  }, []);
-
   const handleClick = () => {
     if (isActive) {
       dispatch(removeFilteredItem(device));
-      setIsActive(!isActive);
-      return;
+    } else {
+      dispatch(addFilteredItem(device));
     }
-    dispatch(addFilteredItem(device));
-
     setIsActive(!isActive);
   };
 
