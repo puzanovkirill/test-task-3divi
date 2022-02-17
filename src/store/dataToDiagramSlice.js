@@ -4,7 +4,7 @@ const dataToDiagramSlice = createSlice({
   name: 'dataToDiagram',
   initialState: [
     {
-      name: 'Monday',
+      name: 'Mon',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -12,7 +12,7 @@ const dataToDiagramSlice = createSlice({
       young: 0,
     },
     {
-      name: 'Tuesday',
+      name: 'Tue',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -20,7 +20,7 @@ const dataToDiagramSlice = createSlice({
       young: 0,
     },
     {
-      name: 'Wednesday',
+      name: 'Wed',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -28,7 +28,7 @@ const dataToDiagramSlice = createSlice({
       young: 0,
     },
     {
-      name: 'Thursday',
+      name: 'Thu',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -36,7 +36,7 @@ const dataToDiagramSlice = createSlice({
       young: 0,
     },
     {
-      name: 'Friday',
+      name: 'Fri',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -44,7 +44,7 @@ const dataToDiagramSlice = createSlice({
       young: 0,
     },
     {
-      name: 'Saturday',
+      name: 'Sat',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -52,7 +52,7 @@ const dataToDiagramSlice = createSlice({
       young: 0,
     },
     {
-      name: 'Sunday',
+      name: 'Sun',
       old: 0,
       kid: 0,
       undefined: 0,
@@ -71,7 +71,7 @@ const dataToDiagramSlice = createSlice({
       });
       action.payload.forEach((date) => {
         const weekDay = Intl.DateTimeFormat('en-US', {
-          weekday: 'long',
+          weekday: 'short',
         }).format(new Date(date.n));
         state.forEach((item) => {
           date.o.forEach((person) => {
