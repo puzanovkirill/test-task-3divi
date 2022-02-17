@@ -1,0 +1,11 @@
+.filterList{
+    width: 100%;
+    max-height: 600px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    padding: 10px;
+}
+.filterList::-webkit-scrollbar{
+    display: none;
+}
