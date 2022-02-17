@@ -10,8 +10,8 @@
     display: inline-block;
     height: 25px;
     width: 12px;
-    border-bottom: 5px solid chartreuse;
-    border-right: 5px solid chartreuse;
+    border-bottom: 8px solid grey;
+    border-right: 8px solid grey;
     transform: rotate(45deg);
 }
 
