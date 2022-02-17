@@ -1,0 +1,20 @@
+.filterItem{
+    display: flex;
+    column-gap: 15%;
+    margin-top: 20px;
+}
+.filterItem__name{
+    font-size: 2rem ;
+}
+.active{
+    display: inline-block;
+    height: 25px;
+    width: 12px;
+    border-bottom: 5px solid chartreuse;
+    border-right: 5px solid chartreuse;
+    transform: rotate(45deg);
+}
+
+.inactive{
+    display: none;
+}
