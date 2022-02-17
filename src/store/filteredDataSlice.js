@@ -11,7 +11,10 @@ const filteredDataSlice = createSlice({
       state.push(action.payload);
     },
     removeFilteredItem(state, action) {
-      state.filter((item) => item.n !== action.payload.n);
+      state.splice(
+        state.findIndex((item) => item.n === action.payload.n),
+        1
+      );
     },
   },
 });
