@@ -8,7 +8,7 @@ const FilterItemsList = () => {
   return (
     <div className={style.filterList}>
       {devices.map((device) => {
-        return <FilterItem device={device} />;
+        return <FilterItem key={device.n} device={device} />;
       })}
     </div>
   );
