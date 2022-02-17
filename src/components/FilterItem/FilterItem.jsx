@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import style from './FilterItem.module.css';
 import { useDispatch } from 'react-redux';
 import {
