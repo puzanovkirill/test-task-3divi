@@ -1,6 +1,6 @@
 .filterItem{
     display: flex;
-    column-gap: 15%;
+    justify-content: space-between;
     margin-top: 20px;
 }
 .filterItem__name{
