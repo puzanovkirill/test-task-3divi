@@ -23,17 +23,18 @@ const Diagram = ({ dataToDiagram }) => {
           left: 20,
           bottom: 5,
         }}
+        barCategoryGap={10}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="kid" stackId="a" fill="#8884d8" />
-        <Bar dataKey="old" stackId="a" fill="#82ca9d" />
-        <Bar dataKey="young" stackId="a" fill="#ffc658" />
-        <Bar dataKey="adult" stackId="a" fill="red" />
-        <Bar dataKey="undefined" stackId="a" fill="grey" />
+        <Bar dataKey="kid" stackId="a" fill="#59981b" />
+        <Bar dataKey="old" stackId="a" fill="#dc471c" />
+        <Bar dataKey="young" stackId="a" fill="#3398ff" />
+        <Bar dataKey="adult" stackId="a" fill="#3366cc" />
+        <Bar dataKey="undefined" stackId="a" fill="#999999" />
       </BarChart>
     </div>
   );
