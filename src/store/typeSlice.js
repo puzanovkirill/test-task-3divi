@@ -11,6 +11,6 @@ const typeSlice = createSlice({
 });
 
 export default typeSlice.reducer;
-export const { setDates } = typeSlice.actions;
+export const { setType } = typeSlice.actions;
 
 export const getType = (state) => state.type;
