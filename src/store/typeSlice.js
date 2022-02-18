@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const typeSlice = createSlice({
   name: 'type',
-  initialState: '',
+  initialState: 'v*vd',
   reducers: {
     setType(state, action) {
       state = action.payload;
