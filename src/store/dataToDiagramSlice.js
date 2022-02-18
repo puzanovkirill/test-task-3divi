@@ -69,13 +69,20 @@ const dataToDiagramSlice = createSlice({
         item.young = 0;
         item.undefined = 0;
       });
-      action.payload.forEach((date) => {
+      console.log(action.payload);
+      action.payload.dates.forEach((date) => {
         const weekDay = Intl.DateTimeFormat('en-US', {
           weekday: 'short',
         }).format(new Date(date.n));
         state.forEach((item) => {
           date.o.forEach((person) => {
-            if (item.name === weekDay) item[person.n] += person.vd;
+            if (item.name === weekDay) {
+              if (action.payload.type === 'v' || action.payload.type === 'vd') {
+                item[person.n] += person[action.payload.type];
+              } else {
+                item[person.n] += person.v * person.vd;
+              }
+            }
           });
         });
       });

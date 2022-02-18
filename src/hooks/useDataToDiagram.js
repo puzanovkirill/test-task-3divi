@@ -5,13 +5,13 @@ import {
   setDataToDiagram,
 } from '../store/dataToDiagramSlice';
 
-export const useDataToDiagram = (dates) => {
+export const useDataToDiagram = (dates, type) => {
   const dataToDiagram = useSelector(getDataToDiagram);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (dates) dispatch(setDataToDiagram(dates));
-  }, [dates]);
+    if (dates) dispatch(setDataToDiagram({ dates, type }));
+  }, [dates, type]);
 
   return dataToDiagram;
 };
