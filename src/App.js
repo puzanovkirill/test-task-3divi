@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <TypeSelect />
-      <div>
+      <div className="App__wrapper">
         <FilterItemsList devices={devices} />
         <Diagram dataToDiagram={dataToDiagram} />
       </div>

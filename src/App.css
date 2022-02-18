@@ -1,6 +1,9 @@
 .App{
     margin: 0 auto;
     padding: 50px 150px;
+}
+
+.App__wrapper{
     display: flex;
     align-self: center;
     column-gap: 50px;
