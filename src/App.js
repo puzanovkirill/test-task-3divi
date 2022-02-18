@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <FilterItemsList />
+      <FilterItemsList devices={devices} />
       <Diagram dataToDiagram={dataToDiagram} />
     </div>
   );
