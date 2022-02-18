@@ -5,7 +5,7 @@ const typeSlice = createSlice({
   initialState: 'v*vd',
   reducers: {
     setType(state, action) {
-      state = action.payload;
+      return action.payload;
     },
   },
 });
