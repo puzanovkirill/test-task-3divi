@@ -86,3 +86,5 @@ const dataToDiagramSlice = createSlice({
 export default dataToDiagramSlice.reducer;
 
 export const { setDataToDiagram } = dataToDiagramSlice.actions;
+
+export const getDataToDiagram = (state) => state.dataToDiagram;

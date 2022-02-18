@@ -23,3 +23,5 @@ export default filteredDataSlice.reducer;
 
 export const { setFilteredData, addFilteredItem, removeFilteredItem } =
   filteredDataSlice.actions;
+
+export const getFilteredData = (state) => state.filteredData;

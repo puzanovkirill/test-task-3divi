@@ -1,13 +1,13 @@
 import useSWR from 'swr';
 import './App.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { setDevices } from './store/devicesSlice';
+import { useDispatch, useSelector, useStore } from 'react-redux';
+import { getDevices, setDevices } from './store/devicesSlice';
 import Diagram from './components/Digram/Diagram';
 import FilterItemsList from './components/FilterItemsList/FilterItemsList';
-import { setDates } from './store/datesSlice';
+import { getDates, setDates } from './store/datesSlice';
 import { useEffect } from 'react';
-import { setDataToDiagram } from './store/dataToDiagramSlice';
-import { setFilteredData } from './store/filteredDataSlice';
+import { getDataToDiagram, setDataToDiagram } from './store/dataToDiagramSlice';
+import { getFilteredData, setFilteredData } from './store/filteredDataSlice';
 
 export const fetcher = (...args) => fetch(...args).then((data) => data.json());
 
@@ -17,10 +17,10 @@ function App() {
     '&b=2020/03/08%2012:00:00&e=2020/09/08%2012:00:00&tzo=0';
   const { data, error } = useSWR(url, fetcher);
   const dispatch = useDispatch();
-  const devices = useSelector((state) => state.devices);
-  const dates = useSelector((state) => state.dates);
-  const dataToDiagram = useSelector((state) => state.dataToDiagram);
-  const filteredData = useSelector((state) => state.filteredData);
+  const devices = useSelector(getDevices);
+  const dates = useSelector(getDates);
+  const dataToDiagram = useSelector(getDataToDiagram);
+  const filteredData = useSelector(getFilteredData);
 
   useEffect(() => {
     dispatch(setFilteredData(devices));
@@ -34,6 +34,10 @@ function App() {
     dispatch(setDataToDiagram(dates));
   }, [dates]);
 
+  useEffect(() => {
+    if (data) dispatch(setDevices(data.data.o));
+  }, [data]);
+
   if (error) {
     return <div>Error...</div>;
   }
@@ -41,8 +45,6 @@ function App() {
   if (!data) {
     return <div>Loading...</div>;
   }
-
-  dispatch(setDevices(data.data.o));
 
   return (
     <div className="App">

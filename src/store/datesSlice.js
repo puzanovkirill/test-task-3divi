@@ -15,3 +15,5 @@ const datesSlice = createSlice({
 
 export default datesSlice.reducer;
 export const { setDates } = datesSlice.actions;
+
+export const getDates = (state) => state.dates;

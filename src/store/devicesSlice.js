@@ -13,3 +13,5 @@ const devicesSlice = createSlice({
 export default devicesSlice.reducer;
 
 export const { setDevices } = devicesSlice.actions;
+
+export const getDevices = (state) => state.devices;
